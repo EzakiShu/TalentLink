@@ -2,10 +2,10 @@
 
 | エンドポイント          | メソッド   | 概要               |
 | ----------------------- | ---------- | ------------------ |
-| `/admin/engineers`      | **GET**    | エンジニア一覧取得 |
-| `/admin/engineers/{id}` | **GET**    | エンジニア詳細取得 |
+| `/admin/engineers`      | **GET**    | エンジニア一覧取得  |
+| `/admin/engineers/{id}` | **GET**    | エンジニア詳細取得  |
 | `/admin/engineers`      | **POST**   | エンジニア登録     |
-| `/admin/engineers/{id}` | **PATCH**  | エンジニア情報更新 |
+| `/admin/engineers/{id}` | **PATCH**  | エンジニア情報更新  |
 | `/admin/engineers/{id}` | **DELETE** | エンジニア削除     |
 | `/admin/customers`      | **GET**    | 顧客一覧取得       |
 | `/admin/customers/{id}` | **GET**    | 顧客詳細取得       |
@@ -17,6 +17,11 @@
 | `/admin/projects`       | **POST**   | 案件登録           |
 | `/admin/projects/{id}`  | **PATCH**  | 案件情報更新       |
 | `/admin/projects/{id}`  | **DELETE** | 案件削除           |
+| `/admin/agency`         | **GET**    | 代理店一覧取得      |
+| `/admin/agency/{id}`    | **GET**    | 代理店詳細取得      |
+| `/admin/agency`         | **POST**   | 代理店登録         |
+| `/admin/agency/{id}`    | **PATCH**  | 代理店情報更新     |
+| `/admin/agency/{id}`    | **DELETE** | 代理店削除        |
 
 ---
 
@@ -41,3 +46,4 @@
 | Ver | 日付       | 変更点 |
 | --- | ---------- | ------ |
 | 1.0 | 2025-06-15 | 初版   |
+| 1.1 | 2025-06-16 | 代理店を追加   |

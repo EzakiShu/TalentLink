@@ -1,12 +1,10 @@
 # Engineer API（受注エンジニア）※ Cognito グループ `engineer`
 
-| エンドポイント                     | メソッド  | 概要             |
-| ---------------------------------- | --------- | ---------------- |
-| `/engineer/projects`               | **GET**   | 公開案件一覧取得 |
-| `/engineer/projects/{id}`          | **GET**   | 案件詳細取得     |
-| `/engineer/applications`           | **GET**   | 応募案件一覧取得 |
-| `/engineer/profile`                | **GET**   | プロフィール取得 |
-
+| エンドポイント                            | メソッド  | 概要             |
+| --------------------------------------- | --------- | ---------------- |
+| `/engineer/projects/{id}/applications`  | **POST**  | 案件応募        |
+| `/engineer/applications`                | **GET**   | 応募案件一覧取得 |
+| `/engineer/profile`                     | **GET**   | プロフィール取得 |
 ---
 
 ## 案件一覧クエリ — `GET /engineer/projects`
@@ -39,3 +37,4 @@
 | Ver | 日付       | 変更点 |
 | --- | ---------- | ------ |
 | 1.0 | 2025-06-15 | 初版   |
+| 1.1 | 2025-06-16 | 案件応募を追加   |
