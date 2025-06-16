@@ -7,7 +7,6 @@
 | `/client/projects`       | **POST**   | 案件登録                 |
 | `/client/projects/{id}`  | **PATCH**  | 案件情報更新             |
 | `/client/projects/{id}`  | **DELETE** | 案件削除                 |
-| `/client/engineers`      | **GET**    | エンジニア一覧取得       |
 | `/client/engineers/{id}` | **GET**    | エンジニア詳細取得       |
 | `/client/messages`       | **POST**   | メッセージ送信（メール） |
 
