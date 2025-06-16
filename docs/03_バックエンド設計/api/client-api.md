@@ -2,13 +2,14 @@
 
 | エンドポイント           | メソッド   | 概要                     |
 | ------------------------ | ---------- | ------------------------ |
-| `/client/projects`       | **GET**    | 案件一覧取得             |
-| `/client/projects/{id}`  | **GET**    | 案件詳細取得             |
-| `/client/projects`       | **POST**   | 案件登録                 |
-| `/client/projects/{id}`  | **PATCH**  | 案件情報更新             |
-| `/client/projects/{id}`  | **DELETE** | 案件削除                 |
-| `/client/engineers/{id}` | **GET**    | エンジニア詳細取得       |
-| `/client/messages`       | **POST**   | メッセージ送信（メール） |
+| `/client/projects`                | **GET**    | 案件一覧取得           |
+| `/client/projects/{id}`           | **GET**    | 案件詳細取得           |
+| `/client/projects`                | **POST**   | 案件登録               |
+| `/client/projects/{id}`           | **PATCH**  | 案件情報更新           |
+| `/client/projects/{id}`           | **DELETE** | 案件削除               |
+| `/client/engineers`               | **GET**    | エンジニア一覧取得       |
+| `/client/engineers/{id}`          | **GET**    | エンジニア詳細取得       |
+| `/client/engineer/{id}/messages`  | **POST**   | メッセージ送信（メール） |
 
 ---
 
@@ -19,6 +20,7 @@
 | `title`    | 案件タイトル部分一致検索      | `?title=LP`        |
 | `from`     | 登録日開始 (YYYY-MM-DD)       | `?from=2025-01-01` |
 | `to`       | 登録日終了 (YYYY-MM-DD)       | `?to=2025-06-30`   |
+| `clientId` | お客様ID                     | `?clientId=xxx`    |
 | `page`     | ページ番号 (1〜) - 既定 **1** | `?page=2`          |
 | `limit`    | 件数 (最大 100) - 既定 **20** | `?limit=50`        |
 
@@ -44,3 +46,4 @@
 | Ver | 日付       | 変更点 |
 | --- | ---------- | ------ |
 | 1.0 | 2025-06-15 | 初版   |
+| 1.1 | 2025-06-16 | APIを固有で用意   |
