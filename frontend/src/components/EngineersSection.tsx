@@ -104,18 +104,18 @@ const EngineersSection = () => {
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header - Enhanced with English and Lines */}
+        {/* Section Header - 3D English Background Design - Fixed Position Higher */}
         <div className="text-center mb-12 relative">
-          {/* Background English Text */}
-          <div className="absolute inset-0 flex items-center justify-center opacity-5">
-            <span className="text-9xl font-bold text-gray-300 tracking-widest">ENGINEERS</span>
+          {/* Background English Text - Much Higher Position and Blue Tinted */}
+          <div className="absolute inset-0 flex items-center justify-center opacity-15 -mt-16">
+            <span className="text-9xl font-bold text-blue-400 tracking-widest">ENGINEERS</span>
           </div>
           
           {/* Decorative Lines */}
           <div className="flex items-center justify-center mb-8">
-            <div className="h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent w-32"></div>
-            <div className="mx-6 w-2 h-2 bg-blue-500 rounded-full"></div>
-            <div className="h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent w-32"></div>
+            <div className="h-px bg-gradient-to-r from-transparent via-[#000080] to-transparent w-32"></div>
+            <div className="mx-6 w-2 h-2 bg-[#000080] rounded-full"></div>
+            <div className="h-px bg-gradient-to-r from-transparent via-[#000080] to-transparent w-32"></div>
           </div>
           
           <h2 className="text-4xl lg:text-5xl font-bold text-black mb-4 relative z-10">
@@ -132,50 +132,14 @@ const EngineersSection = () => {
             <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent w-64"></div>
           </div>
           
-          {/* Beautiful Header Card - Less Rounded */}
-          <div className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 rounded-lg p-8 shadow-xl overflow-hidden mt-12">
-            {/* Background Pattern */}
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute top-4 left-4 w-20 h-20 bg-white rounded-full animate-pulse"></div>
-              <div className="absolute top-16 right-8 w-12 h-12 bg-white rounded-full animate-bounce delay-1000"></div>
-              <div className="absolute bottom-8 left-1/3 w-16 h-16 bg-white rounded-full animate-pulse delay-2000"></div>
-            </div>
-            
-            <div className="relative z-10 text-white">
-              <div className="flex items-center justify-center gap-4 mb-4">
-                <div className="bg-white/20 p-3 rounded-lg">
-                  <Award className="w-8 h-8" />
-                </div>
-                <div className="bg-white/20 p-3 rounded-lg">
-                  <Users className="w-8 h-8" />
-                </div>
-                <div className="bg-white/20 p-3 rounded-lg">
-                  <Star className="w-8 h-8" />
-                </div>
-              </div>
-              <p className="text-xl leading-relaxed max-w-4xl mx-auto">
-                厳しい選考基準を突破した、幅広い知識と豊富な経験を持つ<br />
-                <span className="font-bold text-yellow-300">「タレントリンク認定エンジニア」</span>が登録しています。
-              </p>
-              <div className="mt-6 flex items-center justify-center gap-8 text-sm">
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                  <span>厳格な審査済み</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse delay-500"></div>
-                  <span>豊富な実績</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse delay-1000"></div>
-                  <span>高い技術力</span>
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* Description Text - Same Style as Other Sections */}
+          <p className="text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto mt-6">
+            厳しい選考基準を突破した、幅広い知識と豊富な経験を持つ<br />
+            <span className="font-bold text-[#000080]">「タレントリンク認定エンジニア」</span>が登録しています。
+          </p>
         </div>
 
-        {/* Engineers Grid - Less Rounded */}
+        {/* Engineers Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {engineers.map((engineer) => (
             <div
@@ -187,7 +151,7 @@ const EngineersSection = () => {
                   <img
                     src={engineer.avatar}
                     alt={engineer.name}
-                    className="w-16 h-16 rounded-lg object-cover border-4 border-gray-100 group-hover:border-blue-200 transition-colors duration-300"
+                    className="w-16 h-16 rounded-lg object-cover border-4 border-gray-100 group-hover:border-[#000080]/20 transition-colors duration-300"
                   />
                   <div className="absolute -bottom-1 -right-1 bg-green-500 w-5 h-5 rounded-full border-2 border-white"></div>
                 </div>
@@ -210,7 +174,7 @@ const EngineersSection = () => {
                     {engineer.icon}
                     <span>{engineer.speciality}</span>
                   </div>
-                  <div className="text-lg font-bold text-blue-600">{engineer.hourlyRate}/時</div>
+                  <div className="text-lg font-bold text-[#000080]">{engineer.hourlyRate}/時</div>
                 </div>
 
                 <div className="flex items-center gap-4 text-sm text-gray-600">
@@ -222,19 +186,19 @@ const EngineersSection = () => {
                 </div>
 
                 {/* Specialty - 得意なこと */}
-                <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-4 rounded-lg border border-blue-100">
-                  <div className="text-xs text-blue-600 font-medium mb-2 flex items-center gap-1">
+                <div className="bg-gradient-to-r from-[#000080]/10 to-purple-50 p-4 rounded-lg border border-[#000080]/10">
+                  <div className="text-xs text-[#000080] font-medium mb-2 flex items-center gap-1">
                     <Star className="w-3 h-3" />
                     得意なこと（一言）
                   </div>
-                  <div className="text-sm text-blue-800 font-medium leading-relaxed">{engineer.specialty}</div>
+                  <div className="text-sm text-[#000080]/80 font-medium leading-relaxed">{engineer.specialty}</div>
                 </div>
 
                 <div className="flex flex-wrap gap-2">
                   {engineer.skills.map((skill, index) => (
                     <span
                       key={index}
-                      className="px-2 py-1 bg-blue-50 text-blue-600 text-xs rounded-md font-medium"
+                      className="px-2 py-1 bg-[#000080]/10 text-[#000080] text-xs rounded-md font-medium"
                     >
                       {skill}
                     </span>
@@ -243,7 +207,7 @@ const EngineersSection = () => {
               </div>
 
               <div className="flex gap-3">
-                <button className="flex-1 bg-gradient-to-r from-blue-600 to-blue-700 text-white py-2 px-4 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-200 font-medium text-sm shadow-md hover:shadow-lg transform hover:scale-105">
+                <button className="flex-1 bg-gradient-to-r from-[#000080] to-[#000080]/80 text-white py-2 px-4 rounded-lg hover:from-[#000080]/80 hover:to-[#000080] transition-all duration-200 font-medium text-sm shadow-md hover:shadow-lg transform hover:scale-105">
                   詳細を見る
                 </button>
               </div>
@@ -252,7 +216,7 @@ const EngineersSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
+          <button className="bg-gradient-to-r from-[#000080] to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-[#000080]/80 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
             もっと見る
           </button>
         </div>

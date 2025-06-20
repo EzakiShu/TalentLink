@@ -8,18 +8,18 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = ({ activeTab }) => {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header Message - Enhanced with English and Lines */}
+        {/* Header Message - 3D English Background Design */}
         <div className="text-center mb-16 relative">
-          {/* Background English Text */}
-          <div className="absolute inset-0 flex items-center justify-center opacity-5">
-            <span className="text-8xl font-bold text-gray-300 tracking-widest">TALENT LINK</span>
+          {/* Background English Text - Blue Tinted */}
+          <div className="absolute inset-0 flex items-center justify-center opacity-15">
+            <span className="text-8xl font-bold text-blue-400 tracking-widest transform -rotate-1">TALENT LINK</span>
           </div>
           
           {/* Decorative Lines */}
           <div className="flex items-center justify-center mb-8">
-            <div className="h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent w-32"></div>
-            <div className="mx-6 w-2 h-2 bg-blue-500 rounded-full"></div>
-            <div className="h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent w-32"></div>
+            <div className="h-px bg-gradient-to-r from-transparent via-[#000080] to-transparent w-32"></div>
+            <div className="mx-6 w-2 h-2 bg-[#000080] rounded-full"></div>
+            <div className="h-px bg-gradient-to-r from-transparent via-[#000080] to-transparent w-32"></div>
           </div>
           
           <h2 className="text-4xl lg:text-5xl font-bold text-black mb-6 leading-tight relative z-10">

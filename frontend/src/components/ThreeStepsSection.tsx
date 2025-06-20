@@ -8,7 +8,7 @@ const ThreeStepsSection = () => {
       title: '仕事を発注する',
       description: 'プロジェクトの詳細を入力して、最適なエンジニアを見つけましょう。',
       icon: <Send className="w-8 h-8" />,
-      color: 'from-blue-500 to-blue-700'
+      color: 'from-[#000080] to-[#000080]/80'
     },
     {
       number: 'STEP2',
@@ -28,26 +28,19 @@ const ThreeStepsSection = () => {
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-20 w-40 h-40 bg-blue-500 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-32 h-32 bg-purple-500 rounded-full animate-bounce delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-green-500 rounded-full animate-pulse delay-2000"></div>
-      </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header - Enhanced with English and Lines */}
+        {/* Section Header - 3D English Background Design */}
         <div className="text-center mb-20 relative">
-          {/* Background English Text */}
-          <div className="absolute inset-0 flex items-center justify-center opacity-5">
-            <span className="text-8xl font-bold text-gray-300 tracking-widest">3 STEPS</span>
+          {/* Background English Text - Blue Tinted */}
+          <div className="absolute inset-0 flex items-center justify-center opacity-15">
+            <span className="text-8xl font-bold text-blue-400 tracking-widest transform -rotate-2">3 STEPS</span>
           </div>
           
           {/* Decorative Lines */}
           <div className="flex items-center justify-center mb-8">
-            <div className="h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent w-32"></div>
-            <div className="mx-6 w-2 h-2 bg-blue-500 rounded-full"></div>
-            <div className="h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent w-32"></div>
+            <div className="h-px bg-gradient-to-r from-transparent via-[#000080] to-transparent w-32"></div>
+            <div className="mx-6 w-2 h-2 bg-[#000080] rounded-full"></div>
+            <div className="h-px bg-gradient-to-r from-transparent via-[#000080] to-transparent w-32"></div>
           </div>
           
           <h2 className="text-4xl lg:text-5xl font-bold text-black mb-4 relative z-10">
@@ -65,11 +58,11 @@ const ThreeStepsSection = () => {
           </div>
         </div>
 
-        {/* Circular Steps Flow - Fixed Text Overflow */}
+        {/* Circular Steps Flow */}
         <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16 mb-20">
           {steps.map((step, index) => (
             <React.Fragment key={index}>
-              {/* Step Circle - Optimized for Text */}
+              {/* Step Circle */}
               <div className="relative group">
                 <div className={`w-80 h-80 bg-gradient-to-br ${step.color} rounded-full flex flex-col items-center justify-center text-white shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-110 relative overflow-hidden`}>
                   {/* Background Pattern */}
@@ -116,9 +109,9 @@ const ThreeStepsSection = () => {
           ))}
         </div>
 
-        {/* CTA Button - White Outline Transparent */}
+        {/* CTA Button */}
         <div className="text-center">
-          <button className="border-2 border-blue-600 text-blue-600 bg-transparent px-16 py-6 rounded-lg font-bold text-xl hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+          <button className="border-2 border-[#000080] text-[#000080] bg-transparent px-16 py-6 rounded-lg font-bold text-xl hover:bg-[#000080] hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
             <span className="flex items-center gap-4">
               まずは無料で会員登録
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

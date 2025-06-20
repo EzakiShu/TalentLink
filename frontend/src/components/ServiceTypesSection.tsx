@@ -40,18 +40,18 @@ const ServiceTypesSection = () => {
   return (
     <section className="py-20 bg-white relative overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header - Enhanced with English and Lines */}
+        {/* Section Header - 3D English Background Design - Fixed Straight */}
         <div className="text-center mb-16 relative">
-          {/* Background English Text */}
-          <div className="absolute inset-0 flex items-center justify-center opacity-5">
-            <span className="text-9xl font-bold text-gray-300 tracking-widest">SERVICES</span>
+          {/* Background English Text - Straight and Blue Tinted */}
+          <div className="absolute inset-0 flex items-center justify-center opacity-15">
+            <span className="text-9xl font-bold text-blue-400 tracking-widest">SERVICES</span>
           </div>
           
           {/* Decorative Lines */}
           <div className="flex items-center justify-center mb-8">
-            <div className="h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent w-32"></div>
-            <div className="mx-6 w-2 h-2 bg-blue-500 rounded-full"></div>
-            <div className="h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent w-32"></div>
+            <div className="h-px bg-gradient-to-r from-transparent via-[#000080] to-transparent w-32"></div>
+            <div className="mx-6 w-2 h-2 bg-[#000080] rounded-full"></div>
+            <div className="h-px bg-gradient-to-r from-transparent via-[#000080] to-transparent w-32"></div>
           </div>
           
           <h2 className="text-4xl lg:text-5xl font-bold text-black mb-4 relative z-10">
@@ -69,7 +69,7 @@ const ServiceTypesSection = () => {
           </div>
         </div>
 
-        {/* Service Types Grid - Simple Clean Design */}
+        {/* Service Types Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {serviceTypes.map((service, index) => (
             <div
@@ -85,18 +85,18 @@ const ServiceTypesSection = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                 <div className="absolute top-4 left-4 bg-white p-3 rounded-lg shadow-md">
-                  <div className="text-blue-600">
+                  <div className="text-[#000080]">
                     {service.icon}
                   </div>
                 </div>
-                <div className="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-lg text-xs font-medium">
+                <div className="absolute top-4 right-4 bg-[#000080] text-white px-3 py-1 rounded-lg text-xs font-medium">
                   人気
                 </div>
               </div>
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-[#000080] transition-colors">
                   {service.title}
                 </h3>
                 <p className="text-gray-600 text-sm mb-4 leading-relaxed">
@@ -116,7 +116,7 @@ const ServiceTypesSection = () => {
                 </div>
 
                 <div className="flex items-center justify-between">
-                  <div className="text-xl font-bold text-blue-600">
+                  <div className="text-xl font-bold text-[#000080]">
                     {service.price}
                   </div>
                   <div className="flex items-center gap-1 text-xs text-gray-500">
@@ -129,9 +129,9 @@ const ServiceTypesSection = () => {
           ))}
         </div>
 
-        {/* CTA Button - White Outline Transparent */}
+        {/* CTA Button */}
         <div className="text-center">
-          <button className="border-2 border-blue-600 text-blue-600 bg-transparent px-16 py-6 rounded-lg font-bold text-xl hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+          <button className="border-2 border-[#000080] text-[#000080] bg-transparent px-16 py-6 rounded-lg font-bold text-xl hover:bg-[#000080] hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
             <span className="flex items-center gap-4">
               まずは無料で会員登録
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
