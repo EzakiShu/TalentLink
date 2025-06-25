@@ -4,9 +4,10 @@ import { Code2, Menu, X, Download, ChevronDown } from 'lucide-react';
 interface HeaderProps {
   activeTab: 'client' | 'freelancer';
   setActiveTab: (tab: 'client' | 'freelancer') => void;
+  onNavigateToSearch?: () => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab }) => {
+const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, onNavigateToSearch }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCategoryDropdownOpen, setIsCategoryDropdownOpen] = useState(false);
 
@@ -178,7 +179,10 @@ const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab }) => {
           <div className="flex items-center gap-6 py-3 overflow-x-auto">
             {activeTab === 'client' ? (
               <>
-                <button className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-[#000080] bg-[#000080]/10 rounded-lg whitespace-nowrap hover:bg-[#000080]/20 transition-colors">
+                <button 
+                  onClick={onNavigateToSearch}
+                  className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-[#000080] bg-[#000080]/10 rounded-lg whitespace-nowrap hover:bg-[#000080]/20 transition-colors"
+                >
                   認定エンジニア一覧
                 </button>
                 <div className="relative">

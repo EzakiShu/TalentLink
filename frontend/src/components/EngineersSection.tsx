@@ -1,7 +1,12 @@
 import React from 'react';
 import { Star, MapPin, Code, Database, Smartphone, Palette, Award, Users } from 'lucide-react';
 
-const EngineersSection = () => {
+interface EngineersSectionProps {
+  onNavigateToSearch?: () => void;
+  onNavigateToEngineerDetail?: (engineerId: number) => void;
+}
+
+const EngineersSection: React.FC<EngineersSectionProps> = ({ onNavigateToSearch, onNavigateToEngineerDetail }) => {
   const engineers = [
     {
       id: 1,
@@ -207,7 +212,10 @@ const EngineersSection = () => {
               </div>
 
               <div className="flex gap-3">
-                <button className="flex-1 bg-gradient-to-r from-[#000080] to-[#000080]/80 text-white py-2 px-4 rounded-lg hover:from-[#000080]/80 hover:to-[#000080] transition-all duration-200 font-medium text-sm shadow-md hover:shadow-lg transform hover:scale-105">
+                <button 
+                  onClick={() => onNavigateToEngineerDetail?.(engineer.id)}
+                  className="flex-1 bg-gradient-to-r from-[#000080] to-[#000080]/80 text-white py-2 px-4 rounded-lg hover:from-[#000080]/80 hover:to-[#000080] transition-all duration-200 font-medium text-sm shadow-md hover:shadow-lg transform hover:scale-105"
+                >
                   詳細を見る
                 </button>
               </div>
@@ -216,7 +224,10 @@ const EngineersSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-gradient-to-r from-[#000080] to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-[#000080]/80 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
+          <button 
+            onClick={onNavigateToSearch}
+            className="bg-gradient-to-r from-[#000080] to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-[#000080]/80 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
+          >
             もっと見る
           </button>
         </div>
