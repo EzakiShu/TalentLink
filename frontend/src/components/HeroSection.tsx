@@ -10,7 +10,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ activeTab }) => {
       {/* Hero Banner - Adjusted to Image Size (1517x474) */}
       <section className="relative w-full bg-cover bg-center bg-no-repeat overflow-hidden" 
                style={{
-                 backgroundImage: `url('/いおり様_案2.png')`,
+                 backgroundImage: `url('/hero-image.png')`,
                  aspectRatio: '1517/474', // Matches the image dimensions
                  minHeight: '474px'
                }}>
