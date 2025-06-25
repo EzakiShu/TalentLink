@@ -98,16 +98,40 @@ const ProjectsSection = () => {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+        {/* Section Header - 3D English Background Design */}
+        <div className="text-center mb-16 relative">
+          {/* Background English Text - Blue Tinted */}
+          <div className="absolute inset-0 flex items-center justify-center opacity-15">
+            <span className="text-8xl font-bold text-blue-400 tracking-widest transform rotate-2">PROJECTS</span>
+          </div>
+          
+          {/* Decorative Lines */}
+          <div className="flex items-center justify-center mb-8">
+            <div className="h-px bg-gradient-to-r from-transparent via-[#000080] to-transparent w-32"></div>
+            <div className="mx-6 w-2 h-2 bg-[#000080] rounded-full"></div>
+            <div className="h-px bg-gradient-to-r from-transparent via-[#000080] to-transparent w-32"></div>
+          </div>
+          
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 relative z-10">
             最新プロジェクト案件
           </h2>
+          
+          {/* English Subtitle */}
+          <p className="text-lg text-gray-500 font-medium tracking-wide uppercase mb-4">
+            Latest Projects
+          </p>
+          
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             あなたのスキルを活かせる多様なプロジェクトが見つかります。理想的な案件で次のキャリアステップを踏み出しましょう。
           </p>
+          
+          {/* Bottom Line */}
+          <div className="mt-8 flex items-center justify-center">
+            <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent w-64"></div>
+          </div>
         </div>
 
-        {/* Projects Grid - Less Rounded */}
+        {/* Projects Grid */}
         <div className="grid lg:grid-cols-2 gap-8">
           {projects.map((project) => (
             <div
@@ -124,7 +148,7 @@ const ProjectsSection = () => {
                   <span className={`px-3 py-1 rounded-lg text-xs font-medium ${
                     project.urgent 
                       ? 'bg-red-100 text-red-600' 
-                      : 'bg-blue-100 text-blue-600'
+                      : 'bg-[#000080]/10 text-[#000080]'
                   }`}>
                     {project.urgent ? '急募' : project.type}
                   </span>
@@ -137,7 +161,7 @@ const ProjectsSection = () => {
               <div className="p-6">
                 <div className="flex items-start justify-between mb-4">
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-[#000080] transition-colors">
                       {project.title}
                     </h3>
                     <p className="text-sm text-gray-600 mb-2">{project.company}</p>
@@ -186,7 +210,7 @@ const ProjectsSection = () => {
                 </div>
 
                 <div className="flex gap-3">
-                  <button className="flex-1 bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium">
+                  <button className="flex-1 bg-[#000080] text-white py-3 px-4 rounded-lg hover:bg-[#000080]/80 transition-colors duration-200 font-medium">
                     詳細を見る
                   </button>
                   <button className="px-4 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-200 font-medium">
@@ -199,7 +223,7 @@ const ProjectsSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
+          <button className="bg-gradient-to-r from-[#000080] to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-[#000080]/80 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
             すべての案件を見る
           </button>
         </div>
