@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Search, Filter, MapPin, Star, Code, Database, Smartphone, Palette, ChevronLeft, ChevronRight, ArrowLeft } from 'lucide-react';
 import Header from './Header';
 import WhyChooseSection from './WhyChooseSection';
@@ -16,6 +16,9 @@ const EngineerSearchPage: React.FC<EngineerSearchPageProps> = ({ onNavigateToHom
   const [selectedCategory, setSelectedCategory] = useState('');
   const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
+  
+  // エンジニアグリッドの参照を作成
+  const engineersGridRef = useRef<HTMLDivElement>(null);
 
   // Scroll to top when component mounts
   useEffect(() => {
@@ -169,6 +172,21 @@ const EngineerSearchPage: React.FC<EngineerSearchPageProps> = ({ onNavigateToHom
     );
   };
 
+  // ページ変更時の即座スクロール処理
+  const handlePageChange = (newPage: number) => {
+    setCurrentPage(newPage);
+    
+    // エンジニアグリッドの位置に即座にスクロール
+    if (engineersGridRef.current) {
+      const elementTop = engineersGridRef.current.offsetTop;
+      const offset = 120; // ヘッダーの高さ + 余白
+      window.scrollTo({
+        top: elementTop - offset,
+        behavior: 'auto' // 即座にスクロール
+      });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Header 
@@ -283,7 +301,8 @@ const EngineerSearchPage: React.FC<EngineerSearchPageProps> = ({ onNavigateToHom
 
             {/* Engineers Grid */}
             <div className="flex-1">
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
+              {/* エンジニアグリッドの参照を設定 */}
+              <div ref={engineersGridRef} className="grid md:grid-cols-2 gap-6 mb-8">
                 {displayedEngineers.map((engineer) => (
                   <div
                     key={engineer.id}
@@ -346,7 +365,7 @@ const EngineerSearchPage: React.FC<EngineerSearchPageProps> = ({ onNavigateToHom
                           onClick={() => onNavigateToEngineerDetail?.(engineer.id)}
                           className="w-full bg-[#000080] text-white py-3 px-4 rounded-lg hover:bg-[#000080]/80 transition-colors duration-200 font-medium"
                         >
-                          この人に仕事を相談する→会員登録に遷移
+                          この人に仕事を相談する
                         </button>
                       </div>
                     </div>
@@ -357,7 +376,7 @@ const EngineerSearchPage: React.FC<EngineerSearchPageProps> = ({ onNavigateToHom
               {/* Pagination */}
               <div className="flex items-center justify-center gap-2 mb-8">
                 <button
-                  onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                  onClick={() => handlePageChange(Math.max(currentPage - 1, 1))}
                   disabled={currentPage === 1}
                   className="p-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
@@ -367,7 +386,7 @@ const EngineerSearchPage: React.FC<EngineerSearchPageProps> = ({ onNavigateToHom
                 {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
                   <button
                     key={page}
-                    onClick={() => setCurrentPage(page)}
+                    onClick={() => handlePageChange(page)}
                     className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                       currentPage === page
                         ? 'bg-[#000080] text-white'
@@ -379,7 +398,7 @@ const EngineerSearchPage: React.FC<EngineerSearchPageProps> = ({ onNavigateToHom
                 ))}
                 
                 <button
-                  onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                  onClick={() => handlePageChange(Math.min(currentPage + 1, totalPages))}
                   disabled={currentPage === totalPages}
                   className="p-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
                 >

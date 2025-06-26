@@ -154,8 +154,7 @@ const EngineerDetailPage: React.FC<EngineerDetailPageProps> = ({ engineerId, onN
                   {/* CTA Button */}
                   <div className="flex-shrink-0">
                     <button className="bg-[#000080] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#000080]/80 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
-                      この人に仕事を相談する<br />
-                      <span className="text-sm opacity-90">→会員登録に遷移</span>
+                      この人に仕事を相談する
                     </button>
                   </div>
                 </div>
